@@ -16,4 +16,4 @@ npm install
 cd public/
 npm install
 
-echo "\nBUILD SUCCESSFUL\n"
+echo "BUILD SUCCESSFUL"
