@@ -1,6 +1,7 @@
 (function ( angular ) {
-	var app = angular.module( 'fm2g11', [
-		'templateController', 'homeController',
+	var app = angular.module( 'sampleApp', [
+		'templateController', 'homeController', 'aboutController',     // controllers
+    'sampleFactory',                            // providers
 		'ui.router'] );
 
 	app.config(function($stateProvider, $urlRouterProvider) {
@@ -12,6 +13,10 @@
       .state('home', {
        	url: '/home',
         templateUrl: '/partials/home.html'
+      })
+      .state('about', {
+        url: '/about',
+        templateUrl: '/partials/about.html'
       });
 });
 

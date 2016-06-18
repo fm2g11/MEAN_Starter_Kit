@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html ng-app="fm2g11">
+<html ng-app="sampleApp">
   <head>
   	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/template.css' />
     <link rel='stylesheet' href='/node_modules/bootstrap/dist/css/bootstrap.css' />
@@ -11,6 +11,8 @@
     <script type='text/javascript' src='/javascripts/core.js'></script>
     <script type='text/javascript' src='/javascripts/controllers/templateController.js'></script>
     <script type='text/javascript' src='/javascripts/controllers/homeController.js'></script>
+    <script type='text/javascript' src='/javascripts/controllers/aboutController.js'></script>
+    <script type='text/javascript' src='/javascripts/providers/sampleFactory.js'></script>
   </head>
   <body>
 
@@ -31,6 +33,7 @@
     						<div class="col-xs-12">
     							<ul class="nav nav-tabs nav-justified">
   									<li role="presentation" ng-class="{active: isActive('/home')}"><a ui-sref="home">Home</a></li>
+                    <li role="presentation" ng-class="{active: isActive('/about')}"><a ui-sref="about">About</a></li>
 								</ul>
     						</div>
     					</div>
