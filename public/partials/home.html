@@ -1,10 +1,30 @@
 <div ng-controller="HomeCtrl">
-	<div class="row">
-		<div class="col-sm-6 body">Div 1</div>
-		<div class="col-sm-6 body">Div 2</div>
+	
+	<div class="row ">
+		<div class="col-sm-12 input">
+			<textarea class="textarea" ng-model="input" ng-change="check()"></textarea>
+		</div>
 	</div>
 
 	<div class="row">
-		<div class="col-sm-12 body">Div 3</div>
+		<div class="col-sm-12 output body">
+			<span ng-repeat="word in res" ng-class="classify(word.annotator)" class="word" data-toggle="tooltip" data-placement="top" title="{{ format(word.val) }}" tooltip >
+				{{ word.word }} 
+			</span> 
+		</div>
 	</div>
+
+	<div class="row">
+		<div class="col-sm-12">
+			<h2>Legend</h2>
+			<ul>
+				<li><span class="blue">__</span>   Quadrigram match </li>
+				<li><span class="green">__</span>  Trigram match    </li>
+				<li><span class="yellow">__</span> Bigram match     </li>
+				<li><span class="red">__</span>    Unigram match    </li>
+				<li><span class="grey">__</span>   Unknown word     </li>
+			</ul>
+		</div>
+	</div>
+
 </div>

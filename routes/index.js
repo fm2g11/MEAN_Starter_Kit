@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('template', { title: 'Mean App' });
+  res.render('template', { title: 'Syntax Checker' });
 });
 
 module.exports = router;

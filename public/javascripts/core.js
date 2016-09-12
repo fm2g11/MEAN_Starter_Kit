@@ -1,6 +1,6 @@
 (function ( angular ) {
 	var app = angular.module( 'sampleApp', [
-		'templateController', 'homeController', 'aboutController',     // controllers
+		'templateController', 'homeController',     // controllers
     'sampleFactory',                            // providers
 		'ui.router'] );
 
@@ -13,11 +13,24 @@
       .state('home', {
        	url: '/home',
         templateUrl: '/partials/home.html'
-      })
-      .state('about', {
-        url: '/about',
-        templateUrl: '/partials/about.html'
       });
+  });
+
+  app.directive('tooltip', function(){
+    return {
+        restrict: 'A',
+        link: function(scope, element, attrs){
+            $(element).hover(function(){
+                // on mouseenter
+                $(element).tooltip('show');
+            }, function(){
+                // on mouseleave
+                $(element).tooltip('hide');
+            });
+        }
+    };
 });
+
+
 
 })( angular );

@@ -1,3 +1,40 @@
 .body {
 	border: 2px solid black;
 }
+.textarea{
+	width:100%;
+	height:100%; 
+	box-sizing: border-box;         /* For IE and modern versions of Chrome */
+  -moz-box-sizing: border-box;    /* For Firefox                          */
+  -webkit-box-sizing: border-box; /* For Safari                           */
+}
+
+.input {
+	height:200px;
+}
+.output {
+	min-height:200px;
+	padding:10px;
+}
+
+.word {
+	padding:2px;
+	margin:3px;
+  border-radius: 5px;
+}
+
+.blue {
+	background-color:#5bc0de;
+}
+.green {
+	background-color:#5cb85c;
+}
+.yellow {
+	background-color:#FFD906;
+}
+.red {
+	background-color:#d9534f;
+}
+.grey {
+	background-color:lightgrey;
+}
